@@ -33,4 +33,5 @@ A 201 status code indicates that the write to mongoDB was successful:
 response = requests.post(url, data)
 print(response.status_code)
 print(response.text)
+![image](https://github.com/user-attachments/assets/29f3af90-f4f6-41a4-abfd-69b0cf330712)
 
