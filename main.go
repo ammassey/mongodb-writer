@@ -67,6 +67,8 @@ func postRecipes(c *fiber.Ctx) error {
 
 	recipe := new(Recipes)
 
+	fmt.Println("Request successfully recieved")
+
 	if err := c.BodyParser(recipe); err != nil {
 		return err
 	}
@@ -76,7 +78,10 @@ func postRecipes(c *fiber.Ctx) error {
 		return err
 	}
 
+	fmt.Println("Insert Successful")
+
 	recipe.ID = insertResult.InsertedID.(primitive.ObjectID)
+	fmt.Println("Returning Data")
 
 	return c.Status(201).JSON(recipe)
 }
