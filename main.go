@@ -48,7 +48,7 @@ func main() {
 	}
 
 	fmt.Println("Connected to MongoDB")
-	collection = client.Database("test").Collection("recipes")
+	collection = client.Database("recipe_catalog").Collection("recipe_catalog_log")
 
 	app := fiber.New()
 
